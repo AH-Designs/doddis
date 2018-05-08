@@ -1,0 +1,28 @@
+// content-links.php
+
+// Sub Title - Links Styling
+
+.fc-content{
+  &.subtitle-links{
+    h3{
+        font-size:$xlarge-font;
+        margin-bottom:25px;
+      }
+  }
+}
+
+// Documents Links Styling
+
+.fc-content{
+  &.links-list{
+    ul{
+      li{
+        margin-bottom: 7px;
+        a{
+          color:$brandRed;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

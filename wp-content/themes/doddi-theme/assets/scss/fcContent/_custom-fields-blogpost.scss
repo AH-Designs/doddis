@@ -1,0 +1,43 @@
+// custom-pageblog.php
+
+// Sub Title - pageblog Styling
+
+.fc-content{
+  &.subtitle-page-blog{
+    h3{
+        font-size:$xlarge-font;
+        margin-bottom:25px;
+      }
+  }
+}
+
+// Pageblog Styling
+
+.fc-content{
+  &.page-blog{
+
+    .post-container{
+      margin-bottom: 50px;
+      a{
+        color:$brandRed;
+      }
+      h2{
+        font-size: $xlarge-font;
+        margin-bottom: 15px;
+        font-weight: 600;
+       }
+      h3{
+        font-size: $xxlarge-font;
+        margin-bottom: 15px;
+        font-weight: 600;
+       }
+      .news-meta{
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .excerpt{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

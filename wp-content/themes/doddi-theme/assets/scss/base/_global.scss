@@ -1,0 +1,121 @@
+// ** Global Styles **
+
+//Font Awesome Svgs
+
+.fa-file-image, .fa-arrow-right{
+  font-size: 15px;
+  margin:0 8px;
+  color:$brandRed;
+}
+
+.fa-facebook-f, .fa-info-circle{
+  font-size: 18px;
+  margin-right: 8px;
+  color:$brandRed;
+}
+
+//White panels default styles
+.panel{
+  background: $white;
+  position: relative;
+//Panel sizes
+  &.panel-small{
+    padding:10px;
+    background: $cream;
+  }
+  &.panel-medium{
+    padding:20px 20px 70px 20px;
+  }
+  &.panel-large{
+    padding:25px;
+  }
+  &.panel-red{
+    border:1px solid $brandRed;
+  }
+}
+
+// Facebook Post
+
+.fb-post{
+  color:$brandRed;
+  h5{
+    margin-bottom: 15px;
+  }
+  span{
+    color:$brandRed;
+    text-decoration: underline;
+  }
+  .content{
+    padding: 15px 0 15px 0;
+    border-top: 1px solid $brandRed;
+    border-bottom: 1px solid $brandRed;
+    @include fontSize($small-font);
+    &.post-date{
+      text-decoration: underline;
+      margin-bottom: 15px;
+    }
+  }
+  .fb-link{
+    padding-top:15px;
+    p{
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  }
+}
+
+// ************* Columns  Gutters Stylings **************
+
+// ** Columns Information Panels Gutters **
+information-panels{
+  .gutter-medium{
+    margin-bottom: 20px;
+  }
+  .gutter-small{
+    margin-bottom: 15px;
+    &:nth-of-type(3){
+      margin-bottom: 0;
+    }
+  }
+  @include breakpoint(medium) {
+    .gutter-medium{
+      margin-bottom:15px;
+    }
+  }
+  @include breakpoint(large) {
+    .gutter-medium{
+      margin-bottom:20px;
+    }
+  }
+  @include breakpoint(xlarge) {
+    .gutter-medium{
+      margin-bottom:40px;
+    }
+  }
+}
+
+.no-gutter{
+  margin-bottom: 0!important;
+}
+
+// ** Columns Welcome Panel Gutters **
+welcome-panel{
+  .gutter-medium{
+    margin-bottom: 45px;
+  }
+}
+
+// *** Columns Custom Fields Gutters **
+
+.fc-content{
+  .gutter-small{
+    &:last-of-type{
+      margin-bottom: 40px;
+    }
+  }
+  .gutter-medium{
+    &:last-of-type{
+      margin-bottom: 40px;
+    }
+  }
+}

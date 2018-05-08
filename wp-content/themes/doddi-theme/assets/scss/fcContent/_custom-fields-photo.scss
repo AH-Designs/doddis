@@ -1,0 +1,22 @@
+// content-photo.php
+
+// Sub Title - Single Photo Styling
+
+.fc-content{
+  &.subtitle-photo{
+    h3{
+        font-size:$large-font;
+        margin-bottom:10px;
+      }
+  }
+}
+
+// Single Photo Styling
+
+.fc-content{
+  &.single-photo{
+    img{
+        margin:25px 0 40px 0;
+      }
+    }
+}

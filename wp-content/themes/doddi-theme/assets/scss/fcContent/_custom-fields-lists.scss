@@ -1,0 +1,38 @@
+// content-lists.php
+
+// Sub Title - Lists Styling
+
+.fc-content{
+  &.subtitle-list{
+    h3{
+        font-size:$xlarge-font;
+        margin-bottom:25px;
+      }
+  }
+}
+
+// Documents Links Styling
+
+.fc-content{
+  &.lists{
+    li{
+      position: relative;
+      margin-left:17px;
+      margin-bottom: 7px;
+    }
+    ul{
+      li{
+        &:before{
+          content:'';
+          height:6px;
+          width:6px;
+          background:$brandRed;
+          border-radius: 50%;
+          left:-17px;
+          top:10px;
+          position: absolute;
+        }
+      }
+    }
+  }
+}

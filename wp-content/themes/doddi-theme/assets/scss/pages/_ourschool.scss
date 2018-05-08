@@ -1,0 +1,171 @@
+header-content{
+  display: block;
+  background-image: url('../images/background-grey.png');
+  text-align: center;
+  padding: 45px 0 40px 0;
+  position: relative;
+  min-height: 162px;
+  h1{
+    margin-bottom:5px;
+    font-weight: 400;
+    @include fontSize(30px);
+  }
+  h2{
+    color:$brandRed;
+  }
+}
+
+content-section{
+  display: block;
+  padding:50px 0;
+  position: relative;
+  .content-link{
+    @include fontSize($large-font);
+    background: $brandRed;
+    color:$white;
+    padding:10px 15px;
+    position: absolute;
+    width:355px;
+    max-width: 100%;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    h3{
+      display: inline-block;
+    }
+    .fa-arrow-down{
+      height: 25px;
+      float: right;
+    }
+  }
+  .content-panel{
+    ul{
+      list-style-type: none;
+      background: $brandRed;
+      opacity: 0.9;
+      padding:15px 15px 35px 15px;
+      width:355px;
+      li{
+        margin-bottom: 5px;
+        margin-left: 25px;
+        position: relative;
+        &:before{
+          content:'';
+          width:16px;
+          height:14px;
+          border-bottom:1px solid $white;
+          position: absolute;
+          left:-25px;
+        }
+        a{
+          color:$white;
+          @include fontSize(16px);
+        }
+      }
+    }
+  }
+}
+
+// Rotating Arrow on Dropdown
+.arrow-down{
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+.rotate{
+    transform:rotate(180deg);
+}
+
+
+
+content-section{
+  .important-update{
+    border:1px solid $brandRed;
+    margin-bottom:40px;
+    .title{
+      margin-bottom: 15px;
+      h3{
+        color:$brandRed;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $lightGray;
+        display: inline-block;
+      }
+    }
+    h6{
+      margin-bottom: 10px;
+      margin-left: 25px;
+      position: relative;
+      &:before{
+        content:url('../../assets/images/svgs/info-circle.svg');
+        left:-25px;
+        position: absolute;
+      }
+    }
+    &.top{
+      display: none;
+    }
+  }
+  @include breakpoint(medium) {
+    .important-update{
+      &.bottom{
+        max-width: 470px;
+        max-height: 370px;
+        @include centerBlock;
+        margin-top: 60px;
+        h4{
+          color:$brandRed;
+        }
+      }
+    }
+  }
+  @include breakpoint(large) {
+    .small-block{
+      position: relative;
+    }
+    // dropdown link
+    .content-link{
+      position: relative;
+      top:0;
+      left:0;
+      transform: translateX(0%);
+      svg{
+        display: none;
+      }
+      h3{
+        display: inline-block;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $white;
+      }
+    }
+    // dropdown content listed
+    .dropdown-pane{
+      position: relative;
+      visibility: visible;
+      padding:0;
+      border:none;
+      width: 355px;
+      max-width: 100%;
+      // .our-school-dropdown{
+      //   position: relative;
+      // }
+    }
+    .content-panel{
+      margin-bottom: 40px;
+      ul{
+        width:355px;
+        max-width: 100%;
+        opacity: 1;
+      }
+    }
+    .important-update{
+      display: block;
+      max-width:355px;
+      &.bottom{
+        display: none;
+      }
+      &.top{
+        display: block;
+      }
+    }
+  }
+}

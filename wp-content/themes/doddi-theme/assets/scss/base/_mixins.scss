@@ -1,0 +1,33 @@
+/*********************
+CUSTOM MIXINS
+*********************/
+
+//*** Fonts from Rems to Pxs***
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calcdlateRem($size);
+}
+// @include fontSize(12px);
+
+//* Block Centering
+
+@mixin centerBlock{
+  margin:0 auto;
+  display: block;
+}
+
+// Media queries
+// @include breakpoint(large) {
+//
+// }
+
+// p.percentage-example {
+//     max-width: percentage(7/8);
+// }
+
+    // outline:1px solid red;

@@ -1,0 +1,24 @@
+footer{
+  background-image: url('../images/background-red.png');
+  display: block;
+  padding:20px 40px 0 40px;
+  text-align: center;
+  @include fontSize($small-font);
+  p{
+    color:$white;
+    margin-bottom:20px;
+    a{
+      color:$white;
+      text-decoration:underline;
+    }
+  }
+   @include breakpoint(medium){
+     p{
+       text-align: left;
+       &.by-hambly{
+         text-align: right;
+       }
+
+     }
+   }
+}

@@ -1,0 +1,221 @@
+// Home Page Styling
+
+// ** Spacer on mobile and medium **
+.spacer{
+  height: 176px;
+  // margin-bottom:3px;
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+// ** Information Panels bg **
+information-panels{
+  display: block;
+  padding:25px 0 40px 0;
+  background-image: url('../images/background-grey.png');
+  @include breakpoint(large) {
+    padding-bottom: 0;
+  }
+}
+
+// White Panels Typography
+information-panels{
+  .panel{
+    @include fontSize($small-font);
+    height: 100%;
+    .title{
+      margin-bottom: 15px;
+      h3{
+        color:$brandRed;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $lightGray;
+        display: inline-block;
+      }
+    }
+    img{
+      @include centerBlock;
+    }
+    h6{
+      font-weight: 600;
+      max-width: 238px; // ----------- fix info icon and text
+      margin-bottom:10px;
+    }
+    li{
+      list-style-type: none;
+    }
+    a{
+      text-decoration: underline;
+      font-size:$small-font;
+    }
+    .panel-link{
+      position:absolute;
+      bottom:20px;
+    }
+
+    // ** latest news post **
+    .post{
+      p{
+        margin-bottom: 5px;
+      }
+      a{
+        display: block;
+        margin-bottom: 5px;
+      }
+      span{
+        color:$gray;
+        font-weight: 400;
+      }
+      a{
+        color:$brandRed;
+        text-transform: uppercase;
+        text-decoration: none;
+        .fa-arrow-right{
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  //Important updates
+  .important-update{
+    h6{
+      margin-left: 25px;
+      position: relative;
+      &:before{
+        content:url('../../assets/images/svgs/info-circle.svg');
+        left:-25px;
+        position: absolute;
+      }
+    }
+  }
+
+  // Thinner 3 Panels
+  .blog-post{
+    display: flex;
+    justify-content: space-between;
+    .blog-img{
+      flex-basis: 22%;
+      min-width: 89px;
+      margin-right: 10px;
+    }
+    .content{
+      flex-basis: 73%;
+      h6{
+        text-decoration: underline;
+        font-weight:600;
+        margin-bottom: 13px;
+      }
+      p{
+        margin-bottom: 13px;
+      }
+      .fa-arrow-right{
+        margin-left:8px;
+      }
+      a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color:$brandRed;
+      }
+    }
+  }
+}
+
+// ************** Welcome-panel *****************
+
+welcome-panel{
+  display: block;
+  background: $white;
+  padding-top: 45px;
+  h2{
+    color:$brandRed;
+    margin-bottom: 25px;
+  }
+  p{
+    margin-bottom: 15px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(xlarge) {
+    .content{
+      max-width: 800px;
+    }
+  }
+}
+
+// ************* Awards Badges and Map Bar **************
+
+awards-location-bar{
+  display: block;
+  padding:35px 0;
+  background-image: url('../images/background-grey.png');
+  .badges{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    li{
+      margin-bottom: 35px;
+      flex-basis: 1;
+      width: 30%;
+      a{
+        display: block;
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    padding:35px 50px;
+    .badges{
+      text-align: center;
+      margin-bottom: 40px;
+      justify-content: space-between;
+      li{
+        width:auto;
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include breakpoint(large) {
+    padding:35px 0;
+    .badges{
+        text-align: left;
+        align-items: center;
+        height: 100%;
+        margin-bottom: 0;
+    }
+  }
+}
+
+
+//*** Goggle maps ***
+#google-map{
+  @include centerBlock;
+  @include breakpoint(medium only){
+    width:353px;
+  }
+  .google-map{
+    position: relative;
+    padding-bottom: 22%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    @include breakpoint(medium only){
+      width:353px;
+    }
+      iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+
+      // .gm-style .default-card .google-maps-link a{
+      //   color:$white;
+      //   text-transform: uppercase;
+      //   @include fontSize($baseFont);
+      // }
+    }
+  }
+}

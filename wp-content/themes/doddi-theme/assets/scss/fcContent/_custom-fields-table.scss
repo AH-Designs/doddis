@@ -1,0 +1,37 @@
+// content-table.php
+
+// Sub Title - Table Styling
+
+.fc-content{
+  &.subtitle-table{
+    h3{
+        font-size:$xlarge-font;
+        margin-bottom:25px;
+      }
+  }
+}
+
+// fc Table Styling
+
+.fc-content{
+  &.fc-table{
+    table, th, td {
+      border: 1px solid $xlightGray;
+    }
+    th,td{
+      padding:5px;
+    }
+    td{
+      &:last-of-type{
+        text-align: center;
+      }
+    }
+    table{
+      width:100%;
+    }
+    th{
+      text-align: left;
+    }
+
+  }
+}

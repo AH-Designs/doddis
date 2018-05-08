@@ -1,0 +1,28 @@
+// content-docs.php
+
+// Sub Title - Documents Styling
+
+.fc-content{
+  &.subtitle-docs{
+    h4{
+        font-size:$large-font;
+        margin-bottom:10px;
+      }
+  }
+}
+
+// Documents List Styling
+
+.fc-content{
+  &.documents-list{
+    ul{
+      li{
+        margin-bottom: 7px;
+        a{
+          color:$brandRed;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

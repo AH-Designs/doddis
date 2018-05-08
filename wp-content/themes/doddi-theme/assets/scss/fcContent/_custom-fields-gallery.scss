@@ -1,0 +1,41 @@
+// gallery-links.php
+
+// Sub Title - Links Styling
+
+.fc-content{
+  &.subtitle-gallery{
+    h3{
+        font-size:$xlarge-font;
+        margin-bottom:25px;
+      }
+  }
+}
+
+// Documents Links Styling
+
+.fc-content{
+  &.photo-gallery{
+      text-align: center;
+      margin:35px 0;
+      ul.gallery{
+
+        li{
+          margin-bottom: 7px;
+          display: inline-block;
+          a{
+            color:$brandRed;
+            text-decoration: underline;
+            img{
+              display: inline;
+              margin: 5px;
+            }
+          }
+          p{
+            max-width: 225px;
+            display: block;
+            margin:0 auto;
+          }
+        }
+      }
+  }
+}

@@ -1,0 +1,82 @@
+/******************************************************************
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here is where you import
+all of your Sass files so they can compile into one
+CSS file.
+
+******************************************************************/
+
+// Import local Foundation overrides - Don't link to Bower version as it will be overwritten whenever updated
+@import "settings";
+
+// Import foundation.scss from vendor files
+@import "foundation/foundation";
+
+// Select the components you want to use
+@include foundation-global-styles;
+// @include foundation-grid; //foundation grid (only have one commented at a time)
+@include foundation-flex-grid; //flex grid (only have one commented at a time)
+@include foundation-flex-classes;
+@include foundation-typography;
+// @include foundation-forms;
+// @include foundation-button;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
+// @include foundation-callout;
+// @include foundation-close-button;
+// @include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+// @include foundation-flex-video;
+// @include foundation-label;
+// @include foundation-media-object;
+// @include foundation-menu;
+// @include foundation-menu-icon;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-reveal;
+// @include foundation-switch;
+// @include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+@include foundation-title-bar;
+// @include foundation-tooltip;
+@include foundation-top-bar;
+
+// Custom Styling
+//Base
+
+@import "base/variables";
+@import "base/mixins";
+@import "base/fonts";
+@import "base/global";
+
+//Components
+@import "components/header";
+@import "components/footer";
+@import "components/flickity";
+
+// fcContent - Custom Fields Styling
+@import "fcContent/custom-fields-text";
+@import "fcContent/custom-fields-photo";
+@import "fcContent/custom-fields-docs";
+@import "fcContent/custom-fields-links";
+@import "fcContent/custom-fields-table";
+@import "fcContent/custom-fields-lists";
+@import "fcContent/custom-fields-blogpost";
+@import "fcContent/custom-fields-gallery";
+
+//Pages
+@import "pages/home";
+@import "pages/ourschool";

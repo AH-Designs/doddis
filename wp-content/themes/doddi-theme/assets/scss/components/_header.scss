@@ -1,0 +1,317 @@
+// HEADING STYLING
+
+// ** Burger menu - (burger and cross controled in script.js file) **
+.burger{
+  outline: none;
+  width:50px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+  .line{
+    position: absolute;
+    left:0px;
+    height: 2px;
+    width: 100%;
+    background: $white;
+  }
+  .line01{
+    top:25%;
+  }
+  .line02{
+    top:50%;
+  }
+  .line03{
+    top:75%;
+  }
+}
+
+//Menu Close class toggled in JS
+.menu-burger.close .line01{
+  transform:rotate(45deg);
+  top:50%;
+}
+.menu-burger.close .line02, .menu-burger.close .line03 {
+ transform:rotate(-45deg);
+ top:50%;
+}
+
+// ********** Small and medium Header styling ************
+
+// Top header
+header#small-up{
+  background-image: url('../images/background-red.png');
+  padding:25px 0 25px 0;
+  font-family:$filson-pro;
+  color:$white;
+  //fixed Header
+  position: fixed;
+  width:100%;
+  z-index: 1;
+  .header-top{
+    padding:0 20px;
+    display: flex;
+    div#logo{
+      display: flex;
+      align-items: center;
+      flex-basis: 75%;
+      .logo{
+        max-width: 45px;
+        height: auto;
+      }
+      h1{
+        margin-left: 20px;
+        letter-spacing: -0.03em;
+        span{
+          display: block;
+          @include fontSize($large-font);
+        }
+      }
+    }
+    // Mobile Nav - "Menu" and "Close"
+    div#main-menu{
+      flex-basis: 25%;
+      .title-bar{
+        background: none;
+        text-align: right;
+        position: relative;
+        .title-bar-title{
+          display: none;
+        }
+      }
+    }
+    @include breakpoint(medium) {
+      div#logo{
+        h1{
+          line-height: 1.0;
+          span{
+            @include fontSize($xlarge-font);
+          }
+        }
+      }
+      div#main-menu{
+        .title-bar{
+          .title-bar-title{
+            display: inline-block;
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 75px;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+// Bottom header - Header bar
+header-bar{
+  display: block;
+  background: $brandRed;
+  font-family:$filson-pro;
+  position: fixed;
+  top:118px;
+  width:100%;
+  z-index: 1;
+  padding:17px 0;
+  font-weight: 600;
+  .header-bar{
+    padding:0 20px;
+    display: flex;
+    a{
+      color:$white;
+    }
+    div{
+      &.search{
+        flex-basis: 25%;
+      }
+      &.contact{
+        flex-basis: 75%;
+        a{
+          float: right;
+          &:nth-of-type(1){
+            margin-left:20px;
+          }
+          &.med-email{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  //Changing the email text displayed
+  @include breakpoint(medium) {
+    .header-bar{
+      div{
+        &.contact{
+          a{
+            &.med-email{
+              display: block;
+            }
+            &.small-email{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+
+
+// ************** Large and up Header **************
+
+header#large-up{
+  display: none;
+  @include breakpoint(large){
+    font-family:$filson-pro;
+    display: block;
+    background-image: url('../images/background-red.png');
+    padding:10px 0 20px 0;
+    .header{
+      display: flex;;
+      justify-content: space-between;
+      padding:0 20px;
+      div{
+        flex-basis: 33.333%
+      }
+      h1{
+        color:$white;
+        text-align: center;
+        line-height: 1.1;
+        max-width:425px;
+      }
+      h2{
+        @include fontSize($xxlarge-font);
+        text-align: center;
+      }
+      img{
+        @include centerBlock;
+      }
+      a{
+        color:$white;
+      }
+      .search{
+        text-align: right;
+        .fa-search{
+          margin-left: 10px;
+        }
+      }
+      .contact{
+        text-align: left;
+        a{
+          &.tel{
+            @include fontSize($xlarge-font);
+          }
+          .fa-facebook-square{
+            margin-left:15px;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// ************** Navigation **************
+
+// **** Small and Medum Navigation ****
+
+nav{
+  display: none;
+  margin-top: 176px;
+  font-family:$filson-pro;
+  background:$white;
+  @include fontSize($xlarge-font);
+  position: absolute;
+  text-align: center;
+  z-index: 100;
+  //fixed Nav
+  position:fixed;
+  //full width of the screen menu.
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  .dropdown{
+    @include centerBlock;
+  }
+  .menu{
+    padding-top:70px;
+    width: 100%;
+    margin-bottom: 45px;
+  }
+  a{
+    color:#4c4c4c;
+  }
+  //Facebook Btn only on mobile
+  .btn{
+    @include fontSize($medium-font);
+    color:$white;
+    background: $brandRed;
+    padding:10px 30px;
+    border-radius: 5px;
+    .fa-facebook-f{
+      color:$white;
+    }
+  }
+  @include breakpoint(medium) {
+    .menu{
+      padding-top:175px;
+      margin-bottom: 0;
+    }
+    .btn{
+      display: none;
+    }
+  }
+
+// **** Large and Up Navigation ****
+  @include breakpoint(large) {
+    @include fontSize($baseFont);
+    display: block;
+    padding:10px 0;
+    background:$brandRed;
+    margin: 0;
+    height: 60px;
+    position: relative;
+    a{
+      color:$white;
+    }
+    .menu{
+      background:$brandRed;
+      padding-top:0;
+      li{
+        display: inline-block;
+        a{
+          display: block;
+          padding:10px 25px;
+        }
+      }
+      .submenu{
+        text-align: left;
+        width: 250px;
+        border: none;
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+
+.search{
+  .fa-search{
+    margin-left: 10px;
+  }
+}
+
+// SCROLL MAGIC HEADER
+#scroll-magic-header{
+  z-index: 100;
+}
