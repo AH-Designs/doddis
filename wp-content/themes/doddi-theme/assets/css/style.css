@@ -2219,69 +2219,88 @@ header#large-up {
             margin-left: 15px;
             font-size: 24px; } }
 
-nav {
+#dropdown-menu {
+  background: #fff;
   display: none;
   margin-top: 176px;
   font-family: "filson-pro", sans-serif;
-  background: #fff;
   font-size: 24px;
   font-size: calcdlateRem(24px);
   position: absolute;
-  text-align: center;
   z-index: 100;
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 1; }
-  nav .dropdown {
-    margin: 0 auto;
-    display: block; }
-  nav .menu {
-    padding-top: 70px;
-    width: 100%;
-    margin-bottom: 45px; }
-  nav a {
-    color: #4c4c4c; }
-  nav .btn {
+  z-index: 1;
+  padding-top: 85px;
+  text-align: center; }
+  #dropdown-menu ul {
+    text-align: center;
+    margin-bottom: 70px; }
+    #dropdown-menu ul.sub-menu {
+      display: none; }
+    #dropdown-menu ul li {
+      display: block;
+      margin-bottom: 12px; }
+      #dropdown-menu ul li a {
+        display: block;
+        text-align: center; }
+  #dropdown-menu .btn {
     font-size: 18px;
     font-size: calcdlateRem(18px);
     color: #fff;
     background: #d61b16;
-    padding: 10px 30px;
+    padding: 10px 15px;
+    text-align: center;
     border-radius: 5px; }
-    nav .btn .fa-facebook-f {
+    #dropdown-menu .btn .fa-facebook-f {
       color: #fff; }
-  @media screen and (min-width: 40em) {
-    nav .menu {
-      padding-top: 175px;
-      margin-bottom: 0; }
-    nav .btn {
-      display: none; } }
   @media screen and (min-width: 64em) {
-    nav {
+    #dropdown-menu {
+      background-color: #d61b16;
       font-size: 16px;
       font-size: calcdlateRem(16px);
       display: block;
-      padding: 10px 0;
       background: #d61b16;
       margin: 0;
       height: 60px;
-      position: relative; }
-      nav a {
-        color: #fff; }
-      nav .menu {
-        background: #d61b16;
-        padding-top: 0; }
-        nav .menu li {
-          display: inline-block; }
-          nav .menu li a {
+      position: relative;
+      padding-top: 0; }
+      #dropdown-menu ul {
+        text-align: center;
+        margin-bottom: 0; }
+        #dropdown-menu ul li {
+          display: inline-block;
+          margin-bottom: 0;
+          position: relative; }
+          #dropdown-menu ul li a {
+            padding: 18px 16px;
+            color: #fff; }
+          #dropdown-menu ul li .sub-menu {
             display: block;
-            padding: 10px 25px; }
-        nav .menu .submenu {
-          text-align: left;
-          width: 250px;
-          border: none;
-          margin-top: 12px; } }
+            position: absolute;
+            background-color: #d61b16;
+            padding: 13px 25px;
+            z-index: 1;
+            min-width: 250px;
+            top: 55px;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: all ease-in-out 250ms;
+            -o-transition: all ease-in-out 250ms;
+            transition: all ease-in-out 250ms; }
+            #dropdown-menu ul li .sub-menu li {
+              display: inline; }
+              #dropdown-menu ul li .sub-menu li a {
+                padding: 0;
+                text-align: left;
+                margin-bottom: 5px; }
+          #dropdown-menu ul li.has-children:hover .sub-menu {
+            transition: all ease-in-out 250ms;
+            visibility: visible;
+            opacity: 1; }
+      #dropdown-menu .btn {
+        display: none; } }
 
 .search .fa-search {
   margin-left: 10px; }

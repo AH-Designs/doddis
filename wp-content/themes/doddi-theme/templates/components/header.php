@@ -68,26 +68,20 @@
 
  <!-- ************** Navigation Menu ************** -->
 <div id="scroll-magic-header">
-  <nav id="dropdown-menu">
-    <ul class="dropdown menu vertical large-horizontal" data-dropdown-menu>
-      <li><a href="#">Home</a></li>
-      <li>
-        <a href="#">Our School</a>
-        <ul class="menu vertical">
-          <li><a href="#">Admissions</a></li>
-          <li><a href="#">Performance & Reports</a></li>
-          <li><a href="#">Policies</a></li>
-          <li><a href="#">Information for new parents</a></li>
-          <li><a href="#">Complaints Procedure</a></li>
-          <li><a href="#">School Governance</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Learning</a></li>
-      <li><a href="#">Parents</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Pre-School</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-    <a class="btn" href="#"><i class="fab fa-facebook-f"></i>follow us on Facebook</a>
+  <nav id="dropdown-menu" >
+    <div class="row">
+      <div class="colums small-12">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our School</a></li>
+            <li><a href="#">Safeguarding</a></li>
+            <li><a href="#">Learning</a></li>
+            <li><a href="#">Parents</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Pre-School</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+      </div>
+    </div>
   </nav>
 </div>

@@ -107,14 +107,38 @@
    </div>
  </header-bar>
 
-  <!-- ************** Navigation Menu ************** -->
-<div id="scroll-magic-header">
- <nav id="dropdown-menu">
-   <ul class="dropdown menu vertical large-horizontal" data-dropdown-menu>
-     <?php wp_nav_menu(array( 'container'=>false, 'items_wrap' => '%3$s', 'depth'=>2)); ?>
-   </ul>
-   <a class="btn" href="<?php the_field('facebook_link', 'options'); ?>"><i class="fab fa-facebook-f"></i>follow us on Facebook</a>
- </nav>
+   <!-- ************** Navigation Menu ************** -->
+  <div id="scroll-magic-header">
+    <nav id="dropdown-menu" >
+      <div class="row">
+        <div class="colums small-12">
+            <ul class="menu-nav">
+              <li class="has-children">
+                <a class="menu-list" href="#">Home</a>
+                <ul class="sub-menu">
+                 <li><a href="#">Admissions</a></li>
+                 <li><a href="#">Performance & Reports</a></li>
+                 <li><a href="#">Policies</a></li>
+                 <li><a href="#">Information for new parents</a></li>
+                 <li><a href="#">Complaints Procedure</a></li>
+                 <li><a href="#">School Governance</a></li>
+               </ul>
+              </li>
+              <li><a href="#">Our School</a></li>
+              <li><a href="#">Safeguarding</a></li>
+              <li><a href="#">Learning</a></li>
+              <li><a href="#">Parents</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Pre-School</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+
+             <a class="btn" href="<?php the_field('facebook_link', 'options'); ?>"><i class="fab fa-facebook-f"></i>follow us on Facebook</a>
+
+        </div>
+      </div>
+    </nav>
+
 </div>
 
 

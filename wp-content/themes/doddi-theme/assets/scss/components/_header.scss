@@ -223,88 +223,129 @@ header#large-up{
 }
 
 
-// ************** Navigation **************
+// ****Navigation*****
+#dropdown-menu{
+    background: $white;
+    display: none;
+    margin-top: 176px;
+    font-family:$filson-pro;
+    @include fontSize($xlarge-font);
+    position: absolute;
+    z-index: 100;
+    //fixed Nav
+    position:fixed;
+    //full width of the screen menu.
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    padding-top: 85px;
+    text-align: center;
+    ul{
+      text-align: center;
+      margin-bottom:70px;
+      &.sub-menu{
+        display: none;
+      }
+      li{
+        display: block;
+        margin-bottom:12px;
+        a{
+          display: block;
+          text-align: center;
 
-// **** Small and Medum Navigation ****
-
-nav{
-  display: none;
-  margin-top: 176px;
-  font-family:$filson-pro;
-  background:$white;
-  @include fontSize($xlarge-font);
-  position: absolute;
-  text-align: center;
-  z-index: 100;
-  //fixed Nav
-  position:fixed;
-  //full width of the screen menu.
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  .dropdown{
-    @include centerBlock;
-  }
-  .menu{
-    padding-top:70px;
-    width: 100%;
-    margin-bottom: 45px;
-  }
-  a{
-    color:#4c4c4c;
-  }
-  //Facebook Btn only on mobile
-  .btn{
-    @include fontSize($medium-font);
-    color:$white;
-    background: $brandRed;
-    padding:10px 30px;
-    border-radius: 5px;
-    .fa-facebook-f{
+        }
+      }
+    }
+    .btn{
+      @include fontSize($medium-font);
       color:$white;
+      background: $brandRed;
+      padding:10px 15px;
+      text-align: center;
+      border-radius: 5px;
+      .fa-facebook-f{
+        color:$white;
+      }
     }
-  }
-  @include breakpoint(medium) {
-    .menu{
-      padding-top:175px;
-      margin-bottom: 0;
+    @include breakpoint(large){
+      background-color:$brandRed;
+      @include fontSize($baseFont);
+      display: block;
+      background:$brandRed;
+      margin: 0;
+      height: 60px;
+      position: relative;
+      padding-top:0;
+      ul{
+        text-align: center;
+        margin-bottom: 0;
+        li{
+          display: inline-block;
+          margin-bottom: 0;
+          position: relative;
+          a{
+            padding: 18px 16px;
+            color:$white;
+          }
+
+
+        ////
+        .sub-menu{
+          display: block;
+          position: absolute;
+          background-color: $brandRed;
+          padding: 13px 25px;
+          z-index: 1;
+          min-width: 250px;
+          top:55px;
+          visibility: hidden;
+          opacity: 0;
+          -webkit-transition: all ease-in-out 250ms;
+          -o-transition: all ease-in-out 250ms;
+          transition: all ease-in-out 250ms;
+          li{
+            display: inline;
+            a{
+              padding:0;
+              text-align: left;
+              margin-bottom: 5px;
+            }
+          }
+        }
+
+        &.has-children:hover .sub-menu {
+          transition: all ease-in-out 250ms;
+          visibility: visible;
+          opacity: 1;
+        }
+
+
+      }
+
+
     }
+
+
+
     .btn{
       display: none;
     }
   }
-
-// **** Large and Up Navigation ****
-  @include breakpoint(large) {
-    @include fontSize($baseFont);
-    display: block;
-    padding:10px 0;
-    background:$brandRed;
-    margin: 0;
-    height: 60px;
-    position: relative;
-    a{
-      color:$white;
-    }
-    .menu{
-      background:$brandRed;
-      padding-top:0;
-      li{
-        display: inline-block;
-        a{
-          display: block;
-          padding:10px 25px;
-        }
-      }
-      .submenu{
-        text-align: left;
-        width: 250px;
-        border: none;
-        margin-top: 12px;
-      }
-    }
-  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .search{
