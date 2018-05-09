@@ -159,8 +159,7 @@ https://flickity.metafizzy.co
       }
     }
   }
-
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     .main-carousel{
         .carousel-cell{
           width:33.3%;
@@ -168,41 +167,6 @@ https://flickity.metafizzy.co
             padding-top:calc(200 / 260 * 100%);//background image ratio
           }
         }
-    }
-  }
-
-  // @include breakpoint(large) {
-  //   .main-carousel{
-  //     // margin: 0 calc(-0.5 * (100vw - 1400px));
-  //     .carousel-cell{
-  //       // width: 33.33%;
-  //     }
-  //     .flickity-button{
-  //       display: block;
-  //       &:first-of-type{
-  //         right:700px;
-  //       }
-  //       &:last-of-type{
-  //         left:700px;
-  //       }
-  //     }
-  //   }
-  // }
-
-  @include breakpoint(xlarge) {
-    overflow: hidden;
-    .main-carousel{
-      margin: 0 calc(-0.5 * (100vw - 1400px));
-      .flickity-button{
-        display: block;
-      }
-      .carousel-cell{
-        // width: calc(1400px / 3);
-        width: 20%;
-        &:after{
-           padding-top:calc( 387 / 486 * 100%); //background image ratio
-        }
-      }
     }
   }
 }

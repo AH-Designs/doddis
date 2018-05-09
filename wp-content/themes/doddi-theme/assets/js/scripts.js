@@ -60,4 +60,43 @@ $navScene = new ScrollMagic.Scene({
 // And where we what the class to change too
 .addTo($controller);
 
+
+// Search bar
+
+  $('.screen-reader-text').on( "click", function() {
+
+    $('.search-field').toggleClass('showSearch');
+    $('button.search-submit').addClass('active');
+
+    $('.screen-reader-text').addClass('hideSearchText');
+
+    // if($('.search-field:visible'){
+    //     console.log('yes');
+    //     // $('.screen-reader-text:visible').hide();
+    // }else{
+    //   console.log('no');
+    //     // $('.screen-reader-text:visible').show();
+    // }
+
+
+  });
+
+  // $('button.search-submit').on( "click", function(event) {
+  $(document).on('click', 'button.search-submit', function(event){
+
+    event.preventDefault();
+    if($(this).hasClass('active')){
+      $('form.search-form').submit();
+
+    }else{
+      $('.search-field').toggleClass('showSearch');
+      $('button.search-submit').addClass('active');
+      $('.screen-reader-text').addClass('hideSearchText');
+      return false;
+    }
+
+  });
+
+
+
 });

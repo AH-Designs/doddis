@@ -1,0 +1,57 @@
+// Wordpress searchform.php
+
+.search-form{
+  input{
+    &.search-field{
+      background: none;
+      border:none;
+      border-bottom:1px $white solid;
+      outline: none;
+      opacity: 0;
+      visibility: hidden;
+      width:0px;
+      color:$white;
+      &.showSearch{
+          opacity: 1;
+          visibility: visible;
+          width: auto;
+      }
+    }
+  }
+  // Placeholder Styling
+  input::-webkit-input-placeholder {
+  color: $white !important;
+  }
+
+  input:-moz-placeholder { /* Firefox 18- */
+  color: $white !important;
+  }
+
+  input::-moz-placeholder {  /* Firefox 19+ */
+  color: $white !important;
+  }
+
+  input:-ms-input-placeholder {
+  color:  $white !important;
+  }
+  span.screen-reader-text{
+    opacity: 1;
+    visibility: visible;
+    color:$white;
+    &.hideSearchText{
+      opacity: 0;
+      visibility: hidden;
+      width:0px;
+    }
+  }
+  button.search-submit{
+    svg{
+      color:$white;
+    }
+  }
+}
+
+// Content Missing Styling
+.post-not-found{
+  
+}

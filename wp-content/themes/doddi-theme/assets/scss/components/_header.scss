@@ -39,7 +39,8 @@
 
 // Top header
 header#small-up{
-  background-image: url('../images/background-red.png');
+  // background-image: url('../images/background-red.png');
+  background-color: #cb1a15;
   padding:25px 0 25px 0;
   font-family:$filson-pro;
   color:$white;
@@ -173,7 +174,8 @@ header#large-up{
   @include breakpoint(large){
     font-family:$filson-pro;
     display: block;
-    background-image: url('../images/background-red.png');
+    background-color: #cb1a15;
+    // background-image: url('../images/background-red.png');
     padding:10px 0 20px 0;
     .header{
       display: flex;;

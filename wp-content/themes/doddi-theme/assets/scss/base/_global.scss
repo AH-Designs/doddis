@@ -36,7 +36,7 @@
 
 // Facebook Post
 
-.fb-post{
+.save-the-date{
   color:$brandRed;
   h5{
     margin-bottom: 15px;
@@ -50,16 +50,19 @@
     border-top: 1px solid $brandRed;
     border-bottom: 1px solid $brandRed;
     @include fontSize($small-font);
-    &.post-date{
+    .post-date{
       text-decoration: underline;
       margin-bottom: 15px;
     }
-  }
-  .fb-link{
-    padding-top:15px;
-    p{
-      text-decoration: underline;
+    h6{
+      margin-bottom:10px;
       font-weight: 600;
+    }
+  }
+  .read-more{
+    padding-top:15px;
+    a{
+      color:$brandRed;
     }
   }
 }

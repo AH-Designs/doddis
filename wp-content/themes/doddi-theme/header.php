@@ -54,7 +54,7 @@
            </a>
          </div>
          <div class="search">
-           <a href="#">Search<i class="fas fa-search"></i></a>
+           <?php echo get_search_form(); ?>
          </div>
        </div>
      </div>

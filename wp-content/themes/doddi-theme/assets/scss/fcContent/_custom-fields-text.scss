@@ -2,13 +2,17 @@
 
 // Sub Titles Styling
 .fc-content{
-  p{
-    margin-bottom: 20px;
-  }
-  &.subtitle-text{
+  .subtitle-text{
     h3{
       font-size: $xlarge-font;
       margin-bottom:25px;
+    }
+    h4{
+      font-size: $xxlarge-font;
+      margin-bottom:25px;
+    }
+    p{
+      margin-bottom: 20px;
     }
   }
 }

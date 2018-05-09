@@ -1,7 +1,9 @@
 
 
 <!-- Drop down link -->
-<div class="content-link" data-equalizer data-equalize-on="medium" data-toggle="subpage-dropdown"><h3>News</h3><i class="fas fa-arrow-down"></i></div>
+<div class="content-link" data-equalizer data-equalize-on="medium" data-toggle="subpage-dropdown">
+
+  <h3>News</h3><i class="fas fa-arrow-down"></i></div>
 
 <!-- Dropdown content listed -->
 <div class="dropdown-pane content-panel">

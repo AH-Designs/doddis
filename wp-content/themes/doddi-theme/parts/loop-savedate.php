@@ -1,0 +1,26 @@
+<!-- Category - Important Posts Loop -->
+<?php
+  $important_updates_args = array(
+  ‘post_type’=> ‘post’,
+  'posts_per_page' => 1,
+  'category_name' => 'important-updates'
+  );
+
+  $the_query_important = new WP_Query( $important_updates_args ); ?>
+  <?php while ($the_query_important -> have_posts()) : $the_query_important -> the_post(); ?>
+  <div class="title">
+    <h5>Save The Date</h5>
+  </div>
+  <div class="content">
+    <p class="post-date"><?php the_time('j F Y'); ?></p>
+    <h6><?php the_title(); ?></h6>
+    <p><?php the_field('story_excerpt'); ?>...</p>
+  </div>
+  <div class="read-more">
+    <a href="<?php the_permalink(); ?>">CONTINUE READING<i class="fas fa-arrow-right"></i></a>
+  </div>
+
+<?php
+  endwhile;
+  wp_reset_postdata();
+?>

@@ -42,8 +42,11 @@ Template Name: Homepage
           </div>
 
           <ul>
-            <!-- Our School - Children pages -->
-            <?php get_template_part( 'parts/loop', 'ourschool-children' ); ?>
+            <li><i class="fas fa-arrow-right"></i><a href="#">Admission</a></li>
+            <li><i class="fas fa-arrow-right"></i><a href="#">Ofsted Report</a></li>
+            <li><i class="fas fa-arrow-right"></i><a href="#">Performance Table</a></li>
+            <li><i class="fas fa-arrow-right"></i><a href="#">Term Dates</a></li>
+            <li><i class="fas fa-arrow-right"></i><a href="#">Values and Ethos</a></li>
           </ul>
 
           <a class="panel-link" href="/our-school"><i class="fas fa-info-circle"></i>Learn more about our school</a>
@@ -65,8 +68,10 @@ Template Name: Homepage
     <div class="columns small-12 medium-6 large-4">
       <div class="gutter-medium" data-equalizer-watch="square"  data-equalizer-watch="rectangle" data-equalize-by-row="true">
         <div class="panel panel-medium important-update">
-          <!-- IMPORTANT UPDATES Blog Posts  -->
-            <?php get_template_part( 'parts/loop', 'important' ); ?>
+          <div class="title">
+            <a href="<?php the_permalink(); ?>"><h3>Calendar</h3></a>
+          </div>
+
 
         </div>
       </div>
@@ -122,18 +127,9 @@ Template Name: Homepage
 
     <div class="columns small-12 large-4">
       <div class="gutter-medium">
-        <div class="panel panel-large panel-red fb-post">
-          <h5>Latest from Facebook</h5>
-          <div class="content">
-            <p>A yellow Weather Warning is in place across Devon and Cornwall for ice from 7pm tonight, through until 9am tomorrow morning. Having spoken to Devon Highways this evening, the roads in and around Doddi will be particularly cold and icy, making driving conditions dangerous.</p>
-            <p>Therefore, to ensure the safety of staff, pupils, and parents, school will be open tomorrow from 12:30pm to begin an afternoon session at 12:45pm. Please can I ask that your children have had lunch before they come to school, as we will not be able to provide this tomorrow.</p>
-            <p>Sorry for any inconvenience caused, but thank you for your co-operation.</p>
-            <p>Please take care travelling tomorrow.</p>
-            <p>Please take care travelling tomorrow.- <span class="post-date">Posted 18hrs ago</span></p>
-          </div>
-          <div class="fb-link">
-            <p><i class="fab fa-facebook-f"></i>Follow us on Facebook</p>
-          </div>
+        <div class="panel panel-large panel-red save-the-date">
+          <!-- IMPORTANT UPDATES Blog Posts  -->
+            <?php get_template_part( 'parts/loop', 'savedate' ); ?>
       </div>
     </div>
   </div>
