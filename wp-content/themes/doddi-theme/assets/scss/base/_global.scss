@@ -14,6 +14,12 @@
   color:$brandRed;
 }
 
+information-panels{
+  .fa-arrow-right, .fa-info-circle, .fa-file-image{
+    color:$white;
+  }
+}
+
 //White panels default styles
 .panel{
   background: $white;
@@ -32,6 +38,17 @@
   &.panel-red{
     border:1px solid $brandRed;
   }
+}
+
+//Color the panels
+.panel-blue{
+  background: #0D767B;
+}
+.panel-orange{
+  background: #CB6915;
+}
+.panel-green{
+  background: #11A01A;
 }
 
 // Facebook Post

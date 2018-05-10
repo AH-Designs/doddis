@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Content Page
+Template Name: Contact Page
 */
 ?>
 
@@ -29,6 +29,7 @@ Template Name: Content Page
   </div>
 </header-content>
 
+
 <content-section>
   <div class="row">
     <!-- Sidebar starts -->
@@ -55,7 +56,7 @@ Template Name: Content Page
     </div>
     <!-- Sidebar Ends -->
 
-    <div class="columns small-12 large-8">
+    <div class="columns small-12 large-4">
       <div class="gutter-medium">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -67,18 +68,22 @@ Template Name: Content Page
 
         <?php endwhile; endif; ?>
 
-
         <div class="panel panel-medium important-update bottom">
 
         <!-- Important Updates -->
         <?php get_template_part( 'parts/loop', 'important' ); ?>
 
         </div>
+      </div>
+    </div>
+    <div class="columns small-12 large-4">
+      <div class="gutter-medium">
 
-
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.7672920268824!2d-3.625345148663114!3d50.66858107940366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486da8f73b25078f%3A0xcce218a2ff9eb9fb!2sDoddiscombsleigh+Primary+School!5e0!3m2!1sen!2suk!4v1525880267409" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
 
       </div>
-
     </div>
   </div>
 </content-section>

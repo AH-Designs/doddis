@@ -34,78 +34,50 @@ Template Name: Homepage
 
 <information-panels>
   <div class="row" data-equalizer="square" data-equalize-on="medium" data-equalize-by-row="true">
-    <div class="columns small-12 medium-6 large-4">
+    <div class="columns small-12 medium-4">
       <div class="gutter-medium" data-equalizer-watch="square">
-        <div class="panel panel-medium">
-          <div class="title">
-            <h3>Essential Information</h3>
+          <div class="panel panel-medium panel-orange">
+            <div class="title">
+              <h3>Essential Information</h3>
+            </div>
+
+            <ul>
+              <li><i class="fas fa-arrow-right"></i><a href="#">Admission</a></li>
+              <li><i class="fas fa-arrow-right"></i><a href="#">Ofsted Report</a></li>
+              <li><i class="fas fa-arrow-right"></i><a href="#">Performance Table</a></li>
+              <li><i class="fas fa-arrow-right"></i><a href="#">Term Dates</a></li>
+              <li><i class="fas fa-arrow-right"></i><a href="#">Values and Ethos</a></li>
+            </ul>
+
+            <a class="panel-link" href="/our-school"><i class="fas fa-info-circle"></i>Learn more about our school</a>
           </div>
-
-          <ul>
-            <li><i class="fas fa-arrow-right"></i><a href="#">Admission</a></li>
-            <li><i class="fas fa-arrow-right"></i><a href="#">Ofsted Report</a></li>
-            <li><i class="fas fa-arrow-right"></i><a href="#">Performance Table</a></li>
-            <li><i class="fas fa-arrow-right"></i><a href="#">Term Dates</a></li>
-            <li><i class="fas fa-arrow-right"></i><a href="#">Values and Ethos</a></li>
-          </ul>
-
-          <a class="panel-link" href="/our-school"><i class="fas fa-info-circle"></i>Learn more about our school</a>
         </div>
       </div>
-    </div>
 
-    <div class="columns small-12 medium-6 large-4">
+    <div class="columns small-12 medium-4">
       <div class="gutter-medium" data-equalizer-watch="square">
-        <div class="panel panel-medium">
+
+         <div class="panel panel-medium panel-blue">
           <!-- LATEST NEWS Blog Posts  -->
             <?php get_template_part( 'parts/loop', 'latest' ); ?>
           <a class="panel-link" href="/news"><i class="far fa-file-image file"></i>View all news</a>
-        </div>
+         </div>
+
       </div>
     </div>
 
 
-    <div class="columns small-12 medium-6 large-4">
+    <div class="columns small-12 medium-4">
       <div class="gutter-medium" data-equalizer-watch="square"  data-equalizer-watch="rectangle" data-equalize-by-row="true">
-        <div class="panel panel-medium important-update">
+        <div class="panel panel-medium important-update panel-green">
           <div class="title">
             <a href="<?php the_permalink(); ?>"><h3>Calendar</h3></a>
           </div>
 
-
         </div>
       </div>
     </div>
 
-    <div class="columns small-12 medium-6 large-12">
-      <div class="gutter-medium" data-equalizer-watch="square">
-      <div class="row" data-equalizer="rectangle" data-equalize-on="medium">
-        <div class="columns small-12 large-4">
-          <div class="gutter-small" data-equalizer-watch="rectangle">
-            <div class="panel panel-small">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/applecastle-img.png" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="columns small-12 large-4">
-          <div class="gutter-small"  data-equalizer-watch="rectangle">
-            <div class="panel panel-small blog-post">
-              <!-- Class One Latest Blog Posts Loop  -->
-              <?php get_template_part( 'parts/loop', 'blogclass1' ); ?>
-            </div>
-          </div>
-        </div>
-        <div class="columns small-12 large-4">
-          <div class="gutter-small no-gutter"  data-equalizer-watch="rectangle">
-            <div class="panel panel-small blog-post">
-              <!-- Class Two Latest Blog Posts Loop  -->
-              <?php get_template_part( 'parts/loop', 'blogclass2' ); ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
   </div>
 </information-panels>
 
@@ -127,7 +99,11 @@ Template Name: Homepage
 
     <div class="columns small-12 large-4">
       <div class="gutter-medium">
+
+        <img class="pre-school" src="<?php echo get_template_directory_uri(); ?>/assets/images/applecastle-img.png" alt=""/>
+
         <div class="panel panel-large panel-red save-the-date">
+
           <!-- IMPORTANT UPDATES Blog Posts  -->
             <?php get_template_part( 'parts/loop', 'savedate' ); ?>
       </div>

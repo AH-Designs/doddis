@@ -2,7 +2,7 @@
 
 // Sub Titles Styling
 .fc-content{
-  .subtitle-text{
+  &.subtitle-text{
     h3{
       font-size: $xlarge-font;
       margin-bottom:25px;
@@ -23,13 +23,8 @@
 .fc-content{
   margin-bottom: 10px;
   &.text-area{
-    &:first-of-type{
-      p{
-        margin-bottom: 20px;
-        &:first-of-type{
-          @include fontSize($medium-font);
-        }
-      }
+    p{
+      margin-bottom: 20px;
     }
     a{
       color:red;

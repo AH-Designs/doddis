@@ -243,7 +243,7 @@ header#large-up{
     ul{
       text-align: center;
       margin-bottom:70px;
-      &.sub-menu{
+      &.sub-menu{///
         display: none;
       }
       li{
@@ -252,7 +252,6 @@ header#large-up{
         a{
           display: block;
           text-align: center;
-
         }
       }
     }
@@ -287,21 +286,16 @@ header#large-up{
             padding: 18px 16px;
             color:$white;
           }
-
-
-        ////
         .sub-menu{
           display: block;
           position: absolute;
           background-color: $brandRed;
           padding: 13px 25px;
           z-index: 1;
-          min-width: 250px;
-          top:55px;
+          min-width: 290px;
+          top:60px;
           visibility: hidden;
           opacity: 0;
-          -webkit-transition: all ease-in-out 250ms;
-          -o-transition: all ease-in-out 250ms;
           transition: all ease-in-out 250ms;
           li{
             display: inline;
@@ -312,20 +306,13 @@ header#large-up{
             }
           }
         }
-
-        &.has-children:hover .sub-menu {
+        &.menu-item-has-children:hover .sub-menu {
           transition: all ease-in-out 250ms;
           visibility: visible;
           opacity: 1;
         }
-
-
       }
-
-
     }
-
-
 
     .btn{
       display: none;

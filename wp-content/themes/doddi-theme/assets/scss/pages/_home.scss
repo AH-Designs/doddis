@@ -21,13 +21,14 @@ information-panels{
 
 // White Panels Typography
 information-panels{
+  color:$white;
   .panel{
     @include fontSize($small-font);
     height: 100%;
     .title{
       margin-bottom: 15px;
       h3{
-        color:$brandRed;
+        color:$white;
         padding-bottom: 10px;
         border-bottom: 1px solid $lightGray;
         display: inline-block;
@@ -50,6 +51,7 @@ information-panels{
     a{
       text-decoration: underline;
       font-size:$small-font;
+      color:$white;
     }
     .panel-link{
       position:absolute;
@@ -66,11 +68,11 @@ information-panels{
         margin-bottom: 5px;
       }
       span{
-        color:$gray;
+        // color:$gray;
         font-weight: 400;
       }
       a{
-        color:$brandRed;
+        color:$white;
         text-transform: uppercase;
         text-decoration: none;
         .fa-arrow-right{
@@ -79,49 +81,9 @@ information-panels{
       }
     }
   }
-    //Important updates
-    .important-update{
-      h6{
-        margin-left: 25px;
-        position: relative;
-        &:before{
-          content:url('../../assets/images/svgs/info-circle.svg');
-          left:-25px;
-          position: absolute;
-        }
-      }
-    }
+}
 
-    // Thinner 3 Panels
-    .blog-post{
-      display: flex;
-      justify-content: space-between;
-      .blog-img{
-        flex-basis: 22%;
-        min-width: 89px;
-        margin-right: 10px;
-      }
-      .content{
-        flex-basis: 73%;
-        h6{
-          text-decoration: underline;
-          font-weight:600;
-          margin-bottom: 13px;
-        }
-        p{
-          margin-bottom: 13px;
-        }
-        .fa-arrow-right{
-          margin-left:8px;
-        }
-        a{
-          text-transform: uppercase;
-          text-decoration: none;
-          color:$brandRed;
-        }
-      }
-    }
-  }
+
 
   // ************** Welcome-panel *****************
 
@@ -138,6 +100,12 @@ information-panels{
       &:last-of-type{
         margin-bottom: 0;
       }
+    }
+    img.pre-school{
+      width: 420px;
+      max-width:100%;
+      @include centerBlock;
+      margin-bottom: 25px;
     }
 
     @include breakpoint(xlarge) {

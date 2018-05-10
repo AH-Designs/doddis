@@ -15,7 +15,7 @@
 			if ($children) { ?>
 
 			<!-- Drop down link -->
-      <div class="content-link" data-equalizer data-equalize-on="medium" data-toggle="subpage-dropdown"><h3><?php wp_title( $display = false ); ?></h3><i class="fas fa-arrow-down"></i></div>
+      <div class="content-link" data-equalizer data-equalize-on="medium" data-toggle="subpage-dropdown"><h3><?php echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent ); ?></h3><i class="fas fa-arrow-down"></i></div>
 
 			<!-- Dropdown content listed -->
       <div class="dropdown-pane content-panel">

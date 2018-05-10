@@ -2,7 +2,7 @@ header-content{
   display: block;
   background-image: url('../images/background-grey.png');
   text-align: center;
-  padding: 45px 0 40px 0;
+  padding: 45px 0 50px 0;
   position: relative;
   min-height: 162px;
   h1{
@@ -13,12 +13,16 @@ header-content{
   h2{
     color:$brandRed;
   }
+  @include breakpoint(large){
+      padding-bottom: 45px;
+  }
 }
 
 content-section{
   display: block;
-  padding:50px 0;
+  padding:50px 15px;
   position: relative;
+  //Dropdown link
   .content-link{
     @include fontSize($large-font);
     background: $brandRed;
@@ -39,6 +43,7 @@ content-section{
       float: right;
     }
   }
+  // Dropdown list panel
   .content-panel{
     ul{
       list-style-type: none;
@@ -65,6 +70,24 @@ content-section{
       }
     }
   }
+  // Sidebar images
+  .side-bar-image{
+    width:100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom:40px;
+    max-width: 344px;
+    &:after{
+      content:'';
+      display: block;
+      padding-top:calc(205/ 344 * 100%);//background image ratio
+    }
+  }
+  @include breakpoint(large){
+    padding-left:0;
+    padding-right:0;
+  }
 }
 
 // Rotating Arrow on Dropdown
@@ -76,8 +99,7 @@ content-section{
     transform:rotate(180deg);
 }
 
-
-
+// *** Important updates ***
 content-section{
   .important-update{
     border:1px solid $brandRed;
@@ -105,13 +127,22 @@ content-section{
       display: none;
     }
   }
+  .map{
+      margin-top:0;
+      iframe{
+        @include centerBlock;
+      }
+      @include breakpoint(large){
+      margin-top: 95px;
+    }
+  }
   @include breakpoint(medium) {
     .important-update{
       &.bottom{
         max-width: 470px;
         max-height: 370px;
         @include centerBlock;
-        margin-top: 60px;
+        margin-top: 25px;
         h4{
           color:$brandRed;
         }
