@@ -324,8 +324,30 @@ header#large-up{
 }
 
 
-
-
+// New header appears on scroll in large and up browers
+#large-after-scroll{
+  div#logo-scroll{
+    display: flex;
+    align-items: center;
+    flex-basis: 75%;
+    .logo-scroll{
+      max-width: 60px;
+      height: auto;
+      margin:0;
+    }
+    .main-header-scroll{
+      margin-left: 20px;
+      letter-spacing: -0.03em;
+      font-size:$xxlarge-font;
+      text-align: left;
+      line-height:1.3;
+      span{
+        display: block;
+        @include fontSize($xlarge-font);
+      }
+    }
+  }
+}
 
 
 

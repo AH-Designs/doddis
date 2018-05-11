@@ -46,11 +46,18 @@
          </div>
          <div>
            <a href="<?php echo home_url(); ?>">
-             <img src="<?php the_field('main_school_logo', 'options');?>" alt="Doddiscombsleigh Primary School Logo">
+             <div class="large-before-scroll">
+               <img src="<?php the_field('main_school_logo', 'options');?>" alt="Doddiscombsleigh Primary School Logo">
 
-             <p class="main-header"><?php bloginfo( 'name' ); ?></p>
-             <h2><?php bloginfo( 'description' ); ?></h2>
-
+               <p class="main-header"><?php bloginfo( 'name' ); ?></p>
+               <h2><?php bloginfo( 'description' ); ?></h2>
+             </div>
+             <div id="large-after-scroll">
+               <div id="logo-scroll">
+                   <img class="logo-scroll" src="<?php the_field('main_school_logo', 'options');?>" alt="Doddiscombsleigh Primary School Logo">
+                   <p class="main-header-scroll"><?php bloginfo( 'name' ); ?><span><?php bloginfo( 'description' ); ?></span></p>
+               </div>
+             </div>
            </a>
          </div>
          <div class="search">
@@ -71,7 +78,6 @@
          <div id="logo">
              <img class="logo" src="<?php the_field('main_school_logo', 'options');?>" alt="Doddiscombsleigh Primary School Logo">
              <p class="main-header"><?php bloginfo( 'name' ); ?><span><?php bloginfo( 'description' ); ?></span></p>
-
          </div>
 
          <!-- Burger Menu -->
@@ -107,22 +113,24 @@
    </div>
  </header-bar>
 
-   <!-- ************** Navigation Menu ************** -->
-  <div id="scroll-magic-header">
-    <nav id="dropdown-menu" >
-      <div class="row">
-        <div class="colums small-12">
-            <ul class="menu-nav">
-              <?php wp_nav_menu(array( 'container'=>false, 'items_wrap' => '%3$s', 'depth'=>2)); ?>
-            </ul>
+ <!-- ************** Navigation Menu ************** -->
+  <nav id="dropdown-menu" >
+    <div class="row">
+      <div class="colums small-12">
+          <ul class="menu-nav">
+            <?php wp_nav_menu(array( 'container'=>false, 'items_wrap' => '%3$s', 'depth'=>2)); ?>
+          </ul>
 
-             <a class="btn" href="<?php the_field('facebook_link', 'options'); ?>"><i class="fab fa-facebook-f"></i>follow us on Facebook</a>
+           <a class="btn" href="<?php the_field('facebook_link', 'options'); ?>"><i class="fab fa-facebook-f"></i>follow us on Facebook</a>
 
-        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-</div>
+
+
+
+
 
 
 	<body <?php body_class(); ?>>

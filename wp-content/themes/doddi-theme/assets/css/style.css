@@ -2315,6 +2315,25 @@ header#large-up {
       #dropdown-menu .btn {
         display: none; } }
 
+#large-after-scroll div#logo-scroll {
+  display: flex;
+  align-items: center;
+  flex-basis: 75%; }
+  #large-after-scroll div#logo-scroll .logo-scroll {
+    max-width: 60px;
+    height: auto;
+    margin: 0; }
+  #large-after-scroll div#logo-scroll .main-header-scroll {
+    margin-left: 20px;
+    letter-spacing: -0.03em;
+    font-size: 36px;
+    text-align: left;
+    line-height: 1.3; }
+    #large-after-scroll div#logo-scroll .main-header-scroll span {
+      display: block;
+      font-size: 24px;
+      font-size: calcdlateRem(24px); }
+
 .search .fa-search {
   margin-left: 10px; }
 
