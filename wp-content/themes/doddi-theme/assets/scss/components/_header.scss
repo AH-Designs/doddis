@@ -59,9 +59,10 @@ header#small-up{
         max-width: 45px;
         height: auto;
       }
-      h1{
+      .main-header{
         margin-left: 20px;
         letter-spacing: -0.03em;
+        font-size:$xlarge-font;
         span{
           display: block;
           @include fontSize($large-font);
@@ -182,13 +183,15 @@ header#large-up{
       justify-content: space-between;
       padding:0 20px;
       div{
-        flex-basis: 33.333%
+        flex-basis: 33.333%;
+        text-align:center;
       }
-      h1{
+      .main-header{
         color:$white;
-        text-align: center;
+        display: inline;
         line-height: 1.1;
         max-width:425px;
+        font-size:48px;
       }
       h2{
         @include fontSize($xxlarge-font);
@@ -292,7 +295,7 @@ header#large-up{
           background-color: $brandRed;
           padding: 13px 25px;
           z-index: 1;
-          min-width: 290px;
+          min-width: 230px;
           top:60px;
           visibility: hidden;
           opacity: 0;

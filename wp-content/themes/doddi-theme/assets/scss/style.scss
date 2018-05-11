@@ -67,7 +67,6 @@ CSS file.
 @import "components/footer";
 @import "components/searchform";
 @import "components/flickity";
-@import "components/map-and-badges";
 
 // fcContent - Custom Fields Styling
 @import "fcContent/custom-fields-text";
@@ -78,6 +77,11 @@ CSS file.
 @import "fcContent/custom-fields-lists";
 @import "fcContent/custom-fields-blogpost";
 @import "fcContent/custom-fields-gallery";
+
+// Includes
+@import "includes/map-and-badges";
+@import "includes/govinfotable";
+
 
 //Pages
 @import "pages/home";

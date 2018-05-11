@@ -48,7 +48,7 @@
            <a href="<?php echo home_url(); ?>">
              <img src="<?php the_field('main_school_logo', 'options');?>" alt="Doddiscombsleigh Primary School Logo">
 
-             <h1><?php bloginfo( 'name' ); ?></h1>
+             <p class="main-header"><?php bloginfo( 'name' ); ?></p>
              <h2><?php bloginfo( 'description' ); ?></h2>
 
            </a>
@@ -70,7 +70,7 @@
        <div class="header-top">
          <div id="logo">
              <img class="logo" src="<?php the_field('main_school_logo', 'options');?>" alt="Doddiscombsleigh Primary School Logo">
-             <h1><?php bloginfo( 'name' ); ?><span><?php bloginfo( 'description' ); ?></span></h1>
+             <p class="main-header"><?php bloginfo( 'name' ); ?><span><?php bloginfo( 'description' ); ?></span></p>
 
          </div>
 

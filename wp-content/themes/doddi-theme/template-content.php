@@ -19,11 +19,16 @@ Template Name: Content Page
           echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent );
       ?></h1>
 
-      <h2>
-        <?php
-         empty( $post->post_parent )  ?  : the_title();
-        ?>
-      </h2>
+
+      <?php if ($post->post_parent)  { ?>
+
+        <h2>
+          <?php
+           empty( $post->post_parent )  ?  : the_title();
+          ?>
+        </h2>
+
+      <?php } ?>
 
     </div>
   </div>
@@ -60,9 +65,16 @@ Template Name: Content Page
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-          <!-- Includes the flexable content from wordpress admission on the page that the
-          templates being used on -->
-          <?php include (get_template_directory() .'/includes/flexible-content.php'); ?>
+          <!-- Includes the flexable content from wordpress admin area custom feilds on the page that the
+          templates are being used on -->
+          <?php include (get_template_directory() .'/flex-content/flexible-content.php'); ?>
+
+          <!-- Governor's page only - Table -->
+          <?php if(is_page('governers')){
+
+            include (get_template_directory() .'/includes/govinfotable.php');
+
+          } ?>
 
 
         <?php endwhile; endif; ?>

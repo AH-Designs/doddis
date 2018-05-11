@@ -8,15 +8,13 @@
   <div class="row">
     <div class="small-12">
 
-      <h1><?php
-          echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent );
-      ?></h1>
-
-      <h2>
+      <h1>
         <?php
-         empty( $post->post_parent ) ?  : the_title();
+            foreach((get_the_category()) as $category) {
+                echo $category->cat_name . '</br> ';
+            }
         ?>
-      </h2>
+      </h1>
 
     </div>
   </div>

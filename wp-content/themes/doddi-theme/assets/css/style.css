@@ -2124,10 +2124,11 @@ header#small-up {
       header#small-up .header-top div#logo .logo {
         max-width: 45px;
         height: auto; }
-      header#small-up .header-top div#logo h1 {
+      header#small-up .header-top div#logo .main-header {
         margin-left: 20px;
-        letter-spacing: -0.03em; }
-        header#small-up .header-top div#logo h1 span {
+        letter-spacing: -0.03em;
+        font-size: 24px; }
+        header#small-up .header-top div#logo .main-header span {
           display: block;
           font-size: 20px;
           font-size: calcdlateRem(20px); }
@@ -2203,12 +2204,14 @@ header#large-up {
         justify-content: space-between;
         padding: 0 20px; }
         header#large-up .header div {
-          flex-basis: 33.333%; }
-        header#large-up .header h1 {
+          flex-basis: 33.333%;
+          text-align: center; }
+        header#large-up .header .main-header {
           color: #fff;
-          text-align: center;
+          display: inline;
           line-height: 1.1;
-          max-width: 425px; }
+          max-width: 425px;
+          font-size: 48px; }
         header#large-up .header h2 {
           font-size: 36px;
           font-size: calcdlateRem(36px);
@@ -2294,7 +2297,7 @@ header#large-up {
             background-color: #d61b16;
             padding: 13px 25px;
             z-index: 1;
-            min-width: 290px;
+            min-width: 230px;
             top: 60px;
             visibility: hidden;
             opacity: 0;
@@ -2513,65 +2516,6 @@ https://flickity.metafizzy.co
     #carousel .main-carousel .carousel-cell:after {
       padding-top: calc(200 / 260 * 100%); } }
 
-awards-location-bar {
-  display: block;
-  padding: 35px 0; }
-  awards-location-bar .badges {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center; }
-    awards-location-bar .badges li {
-      margin-bottom: 35px;
-      flex-basis: 1;
-      width: 30%; }
-      awards-location-bar .badges li a {
-        display: block; }
-  @media screen and (min-width: 40em) {
-    awards-location-bar {
-      padding: 35px 50px; }
-      awards-location-bar .badges {
-        text-align: center;
-        margin-bottom: 40px;
-        justify-content: space-between; }
-        awards-location-bar .badges li {
-          width: auto;
-          margin-bottom: 0; } }
-  @media screen and (min-width: 64em) {
-    awards-location-bar {
-      padding: 35px 0; }
-      awards-location-bar .badges {
-        text-align: left;
-        align-items: center;
-        height: 100%;
-        margin-bottom: 0; } }
-
-#google-map {
-  width: 441px;
-  float: right; }
-  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    #google-map {
-      float: none;
-      margin: 0 auto;
-      display: block;
-      width: 353px; } }
-  #google-map .google-map {
-    position: relative;
-    padding-bottom: 22%;
-    height: 0;
-    overflow: hidden;
-    left: 50%;
-    transform: translateX(-50%); }
-    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-      #google-map .google-map {
-        width: 353px; } }
-    #google-map .google-map iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100% !important;
-      height: 100% !important; }
-
 .fc-content.subtitle-text h3 {
   font-size: 24px;
   margin-bottom: 25px; }
@@ -2700,6 +2644,179 @@ awards-location-bar {
       display: block;
       margin: 0 auto; }
 
+awards-location-bar {
+  display: block;
+  padding: 35px 0; }
+  awards-location-bar .badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center; }
+    awards-location-bar .badges li {
+      margin-bottom: 35px;
+      flex-basis: 1;
+      width: 30%; }
+      awards-location-bar .badges li a {
+        display: block; }
+  @media screen and (min-width: 40em) {
+    awards-location-bar {
+      padding: 35px 50px; }
+      awards-location-bar .badges {
+        text-align: center;
+        margin-bottom: 40px;
+        justify-content: space-between; }
+        awards-location-bar .badges li {
+          width: auto;
+          margin-bottom: 0; } }
+  @media screen and (min-width: 64em) {
+    awards-location-bar {
+      padding: 35px 0; }
+      awards-location-bar .badges {
+        text-align: left;
+        align-items: center;
+        height: 100%;
+        margin-bottom: 0; } }
+
+#google-map {
+  width: 441px;
+  float: right; }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    #google-map {
+      float: none;
+      margin: 0 auto;
+      display: block;
+      width: 353px; } }
+  #google-map .google-map {
+    position: relative;
+    padding-bottom: 22%;
+    height: 0;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%); }
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      #google-map .google-map {
+        width: 353px; } }
+    #google-map .google-map iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important; }
+
+.fc-content.subtitle-gov-table h3 {
+  font-size: 20px; }
+@media screen and (min-width: 64em) {
+  .fc-content h3 {
+    font-size: 24px;
+    margin-bottom: 25px; } }
+
+@media screen and (max-width: 63.9375em) {
+  .fc-content tr {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 20px 0; }
+    .fc-content tr:last-of-type {
+      border-bottom: none; }
+  .fc-content th, .fc-content td {
+    padding: 5px 5px 5px 200px;
+    min-width: 100px;
+    display: block; }
+  .fc-content td {
+    text-align: left; }
+  .fc-content table.fc-table {
+    width: 100%; }
+  .fc-content thead {
+    display: none; }
+
+  table.fc-table td.mobile-title-portrate {
+    position: relative; }
+    table.fc-table td.mobile-title-portrate:before {
+      content: 'Name';
+      font-weight: 600;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Averta PE SemiBold'; }
+  table.fc-table td.mobile-title-governor {
+    position: relative; }
+    table.fc-table td.mobile-title-governor:before {
+      content: 'Type';
+      font-weight: 600;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Averta PE SemiBold'; }
+  table.fc-table td.mobile-title-appointing {
+    position: relative; }
+    table.fc-table td.mobile-title-appointing:before {
+      content: 'Appointed by';
+      font-weight: 600;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Averta PE SemiBold'; }
+  table.fc-table td.mobile-title-office {
+    position: relative; }
+    table.fc-table td.mobile-title-office:before {
+      content: 'Office';
+      font-weight: 600;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Averta PE SemiBold'; }
+  table.fc-table td.mobile-title-term {
+    position: relative; }
+    table.fc-table td.mobile-title-term:before {
+      content: 'Term';
+      font-weight: 600;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Averta PE SemiBold'; }
+  table.fc-table td.mobile-title-committees {
+    position: relative; }
+    table.fc-table td.mobile-title-committees:before {
+      content: 'Committees';
+      font-weight: 600;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Averta PE SemiBold'; }
+  table.fc-table td.mobile-title-interests {
+    position: relative; }
+    table.fc-table td.mobile-title-interests:before {
+      content: 'Registered Interests';
+      font-weight: 600;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Averta PE SemiBold'; } }
+@media screen and (min-width: 64em) {
+  .fc-content table.fc-table, .fc-content th, .fc-content td {
+    border: 1px solid #e1e1e1; }
+  .fc-content th, .fc-content td {
+    padding: 15px 10px; }
+  .fc-content td {
+    text-align: left; }
+  .fc-content table.fc-table {
+    width: 100%; }
+  .fc-content th {
+    text-align: left; } }
 .spacer {
   height: 176px; }
   @media screen and (min-width: 64em) {
@@ -2763,9 +2880,10 @@ welcome-panel {
   display: block;
   background: #fff;
   padding-top: 45px; }
-  welcome-panel h2 {
+  welcome-panel h1 {
     color: #d61b16;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    font-size: 28px; }
   welcome-panel p {
     margin-bottom: 15px; }
     welcome-panel p:last-of-type {
@@ -2889,9 +3007,49 @@ content-section .map {
   content-section .map iframe {
     margin: 0 auto;
     display: block; }
+  content-section .map.map-mobile {
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 20%; }
+  content-section .map.map-large {
+    display: none; }
+  content-section .map iframe.mobile-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; }
+  content-section .map iframe.large-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; }
+  @media screen and (min-width: 40em) {
+    content-section .map.map-mobile {
+      padding-top: 15%; } }
   @media screen and (min-width: 64em) {
     content-section .map {
-      margin-top: 95px; } }
+      margin-top: 95px; }
+      content-section .map.map-mobile {
+        display: none; }
+      content-section .map.map-large {
+        display: block;
+        margin-bottom: 50px;
+        position: relative;
+        overflow: hidden;
+        padding-top: 80%;
+        margin-left: 35px; }
+      content-section .map iframe.large-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0; } }
 @media screen and (min-width: 40em) {
   content-section .important-update.bottom {
     max-width: 470px;

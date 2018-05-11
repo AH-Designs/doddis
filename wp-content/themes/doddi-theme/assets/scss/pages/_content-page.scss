@@ -127,15 +127,72 @@ content-section{
       display: none;
     }
   }
+  // Map on contact page - Responsive Iframe
   .map{
       margin-top:0;
       iframe{
         @include centerBlock;
       }
+      &.map-mobile{
+        margin-bottom: 50px;
+        position: relative;
+        overflow: hidden;
+        padding-top: 20%;
+      }
+      &.map-large{
+        display: none;
+      }
+      iframe{
+        &.mobile-iframe{
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         border: 0;
+        }
+        &.large-iframe{
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         border: 0;
+        }
+      }
+
+      @include breakpoint(medium){
+        &.map-mobile{
+          padding-top: 15%;
+        }
+
+      }
       @include breakpoint(large){
       margin-top: 95px;
-    }
+        &.map-mobile{
+          display: none;
+        }
+        &.map-large{
+          display: block;
+          margin-bottom: 50px;
+          position: relative;
+          overflow: hidden;
+          padding-top: 80%;
+          margin-left: 35px;
+        }
+        iframe{
+          &.large-iframe{
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           border: 0;
+          }
+        }
+      }
   }
+
   @include breakpoint(medium) {
     .important-update{
       &.bottom{

@@ -1,0 +1,167 @@
+// Gov Table of informtaion
+
+// Gov Table of informtaion
+
+// Sub Title - Governors Table of information subtile
+
+.fc-content{
+  &.subtitle-gov-table{
+    h3{
+        font-size:$large-font;
+
+      }
+  }
+  @include breakpoint(large){
+    h3{
+        font-size:$xlarge-font;
+        margin-bottom:25px;
+      }
+  }
+}
+
+
+// Governors Table of information styleing
+
+@include breakpoint(medium down){
+  .fc-content{
+
+      tr{
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid $xlightGray;
+        padding:20px 0;
+        &:last-of-type{
+          border-bottom:none;
+        }
+      }
+      th,td{
+        padding: 5px 5px 5px 200px;
+        min-width: 100px;
+        display: block;
+      }
+      td{
+        text-align: left;
+      }
+      table.fc-table{
+        width:100%;
+      }
+      thead{
+        display: none;//
+      }
+  }
+
+  // Titles Before Element in mobile viewBox
+  table.fc-table{
+    td.mobile-title-portrate{
+      position: relative;
+      &:before{
+        content: 'Name';
+        font-weight: 600;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);// centers it horizontally
+        font-family: 'Averta PE SemiBold';
+      }
+    }
+    td.mobile-title-governor{
+      position: relative;
+      &:before{
+        content: 'Type';
+        font-weight: 600;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);// centers it horizontally
+        font-family: 'Averta PE SemiBold';
+      }
+    }
+    td.mobile-title-appointing{
+      position: relative;
+      &:before{
+        content: 'Appointed by';
+        font-weight: 600;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);// centers it horizontally
+        font-family: 'Averta PE SemiBold';
+      }
+    }
+    td.mobile-title-office{
+      position: relative;
+      &:before{
+        content: 'Office';
+        font-weight: 600;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);// centers it horizontally
+        font-family: 'Averta PE SemiBold';
+      }
+    }
+    td.mobile-title-term{
+      position: relative;
+      &:before{
+        content: 'Term';
+        font-weight: 600;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);// centers it horizontally
+        font-family: 'Averta PE SemiBold';
+      }
+    }
+    td.mobile-title-committees{
+      position: relative;
+      &:before{
+        content: 'Committees';
+        font-weight: 600;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);// centers it horizontally
+        font-family: 'Averta PE SemiBold';
+      }
+    }
+    td.mobile-title-interests{
+      position: relative;
+      &:before{
+        content: 'Registered Interests';
+        font-weight: 600;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);// centers it horizontally
+        font-family: 'Averta PE SemiBold';
+      }
+    }
+  }
+
+}
+@include breakpoint(large up){
+  .fc-content{
+      table.fc-table, th, td {
+        border: 1px solid $xlightGray;
+      }
+      th,td{
+        padding:15px 10px;
+      }
+      td{
+          text-align: left;
+      }
+      table.fc-table{
+        width:100%;
+      }
+      th{
+        text-align: left;
+      }
+  }
+}
